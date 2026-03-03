@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "strict": true,
+
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@context": ["src/context/index.ts"],
+      "@provider": ["src/provider/index.ts"],
+      "@components": ["src/Components/index.ts"],
+      "@hooks/*": ["src/hooks/*"],
+      "@editor-types": ["src/types/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

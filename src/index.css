@@ -1,0 +1,8 @@
+:root {
+  --md-color-bg: #282c34;
+  --md-color-text: #abb2bf;
+  --md-color-caret: #528bff;
+
+  --md-font-geist: "Geist Variable", sans-serif;
+  --md-font-geist-mono: font-family: "Geist Mono Variable", monospace;
+}

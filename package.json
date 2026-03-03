@@ -17,6 +17,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avainroot/mdeditor"
+  },
   "scripts": {
     "dev": "vite --config vite.playground.ts",
     "build": "tsc -b && vite build",

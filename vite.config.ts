@@ -10,11 +10,12 @@ export default defineConfig({
   plugins: [
     visualizer({ open: true }),
     cssInjectedByJsPlugin(),
-    react({
-      babel: {
-        plugins: [["babel-plugin-react-compiler"]],
-      },
-    }),
+    react(),
+    // react({
+    //   babel: {
+    //     plugins: [["babel-plugin-react-compiler"]],
+    //   },
+    // }),
     dts({ include: ["src"] }),
   ],
   build: {

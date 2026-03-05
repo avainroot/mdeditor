@@ -11,10 +11,6 @@
     "react",
     "codemirror"
   ],
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "license": "MIT",
   "type": "module",
   "files": [

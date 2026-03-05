@@ -1,6 +1,6 @@
 {
   "name": "@rootflow/mdeditor",
-  "version": "0.1.8",
+  "version": "0.1.7",
   "description": "Markdown editor",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -11,6 +11,10 @@
     "react",
     "codemirror"
   ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "license": "MIT",
   "type": "module",
   "files": [

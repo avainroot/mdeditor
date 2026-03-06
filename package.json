@@ -12,8 +12,7 @@
     "codemirror"
   ],
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "license": "MIT",
   "type": "module",

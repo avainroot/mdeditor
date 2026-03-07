@@ -3,6 +3,28 @@
   --md-color-text: #abb2bf;
   --md-color-caret: #528bff;
 
+  --md-preview-bg: #1e2127;
+  --md-preview-text: #abb2bf;
+
+  --md-preview-link: #61afef;
+  --md-preview-link-hover: #4d8fd1;
+
+  --md-preview-quote-bg: #21252b;
+  --md-preview-quote-border: #4b5263;
+  --md-preview-quote-text: #7f8a9a;
+
+  --md-preview-hr: #3e4451;
+
+  --md-preview-list-marker: #4b5263;
+  --md-preview-list-gap: 0.35em;
+
+  --md-preview-link: #61afef;
+  --md-preview-link-hover: #4d8fd1;
+  --md-preview-link-visited: #9b84c4;
+
+  --md-scrollbar-thumb: #4b5263;
+  --md-scrollbar-track: transparent;
+
   --md-font-geist: "Geist Variable", sans-serif;
-  --md-font-geist-mono: font-family: "Geist Mono Variable", monospace;
+  --md-font-geist-mono: "Geist Mono Variable", monospace;
 }

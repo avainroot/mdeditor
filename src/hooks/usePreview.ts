@@ -39,8 +39,16 @@ const createRenderer = ({ styles }: PreviewProps) => {
     return `<pre class="${styles.code}"><code class="hljs language-${language}">${highlighted}</code></pre>`;
   };
 
+  renderer.blockquote = ({ tokens }) => {
+    return `<blockquote class="${styles.blockquote}">${marked.parser(tokens)}</blockquote>`;
+  };
+
   renderer.image = ({ href, text, title }) =>
     `<div class="${styles.image}"><img src="${href}" alt="${text}"><span>${title}</span></div>`;
+
+  // renderer.hr = () => {
+  //   return `<hr class="${styles.hr}">`;
+  // };
 
   return renderer;
 };

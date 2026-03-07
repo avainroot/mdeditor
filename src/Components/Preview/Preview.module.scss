@@ -5,9 +5,14 @@
   font-size: 14px;
   line-height: 1.2;
   overflow-y: auto;
+  scrollbar-color: var(--md-scrollbar-thumb) transparent;
+  scrollbar-width: thin;
+  background: var(--md-preview-bg);
+  color: var(--md-preview-text);
 
   hr {
     margin-top: 16px;
+    color: var(--md-preview-hr);
 
     & + hr {
       margin: 0;
@@ -20,7 +25,7 @@
   .heading-4,
   .heading-5,
   .heading-6 {
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 8px;
 
@@ -106,5 +111,83 @@
 
   del {
     text-decoration: line-through;
+  }
+
+  .blockquote {
+    background: var(--md-preview-quote-bg);
+    border: 1px solid var(--md-preview-quote-border);
+    color: var(--md-preview-quote-text);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+
+    & > blockquote {
+      border: 1px solid var(--md-preview-quote-border);
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 4px;
+
+      & > blockquote {
+        border: 1px solid var(--md-preview-quote-border);
+        padding: 8px;
+        margin-top: 8px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 1.25em;
+    margin: 8px 0;
+
+    li::before {
+      content: "–";
+      color: var(--md-preview-list-marker);
+      margin-right: 0.5em;
+      margin-left: -1.25em;
+    }
+  }
+
+  ol {
+    padding-left: 1.5em;
+    list-style-type: decimal;
+    margin: 8px 0;
+
+    li::marker {
+      color: var(--md-preview-list-marker);
+    }
+  }
+
+  li + li {
+    margin-top: var(--md-preview-list-gap);
+  }
+
+  li > ul,
+  li > ol {
+    margin-top: var(--md-preview-list-gap);
+  }
+
+  a {
+    color: var(--md-preview-link);
+    text-decoration: underline;
+    text-decoration-color: color-mix(
+      in srgb,
+      var(--md-preview-link) 40%,
+      transparent
+    );
+    text-underline-offset: 3px;
+    transition:
+      color 0.15s,
+      text-decoration-color 0.15s;
+
+    &:hover {
+      color: var(--md-preview-link-hover);
+      text-decoration-color: var(--md-preview-link-hover);
+    }
+
+    &:visited {
+      color: var(--md-preview-link-visited);
+    }
   }
 }

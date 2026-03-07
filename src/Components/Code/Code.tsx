@@ -33,6 +33,8 @@ const Code = () => {
     ".cm-scroller": {
       overflow: "auto",
       fontFamily: "inherit",
+      scrollbarColor: "var(--md-scrollbar-thumb) transparent",
+      scrollbarWidth: "thin",
     },
     ".cm-content": {
       caretColor: "var(--md-color-caret)",

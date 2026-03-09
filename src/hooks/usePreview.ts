@@ -27,8 +27,8 @@ const createRenderer = ({ styles }: PreviewProps) => {
   renderer.paragraph = ({ text }) =>
     `<p class="${styles.paragraph}">${marked.parseInline(text)}</p>`;
 
-  renderer.codespan = ({ text }) =>
-    `<code class="${styles.codespan}">${text}</code>`;
+  // renderer.codespan = ({ text }) =>
+  //   `<code class="${styles.codespan}">${text}</code>`;
 
   renderer.code = ({ text, lang }) => {
     const language = lang && hljs.getLanguage(lang) ? lang : "plaintext";

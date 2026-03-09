@@ -67,14 +67,6 @@
     font-family: var(--md-font-geist-mono);
   }
 
-  .codespan {
-    background: var(--md-color-bg);
-    color: var(--md-color-text);
-    display: inline-block;
-    padding: 4px 6px;
-    border-radius: 4px;
-  }
-
   .image {
     display: flex;
     flex-direction: column;
@@ -92,12 +84,20 @@
     }
   }
 
+  code {
+    // background: var(--md-color-bg);
+    color: var(--md-color-text);
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+
   .code {
     margin: 8px 0 16px;
 
     code {
-      padding: 16px;
       border-radius: 8px;
+      // background: inherit;
     }
   }
 

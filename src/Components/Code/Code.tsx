@@ -45,6 +45,11 @@ const Code = () => {
       fontSize: "14px",
       padding: 0,
     },
+    ".cm-cursor": {
+      borderLeftWidth: "9px",
+      borderLeftColor: "var(--md-color-caret)",
+      opacity: 0.8,
+    },
     "&.cm-focused": {
       outline: "none",
     },
@@ -73,6 +78,8 @@ const Code = () => {
       extensions: [
         markdown(),
         baseTheme,
+        // drawSelection(),
+        // highlightActiveLine(),
         syntaxHighlighting(markdownHighlight),
         updateListener,
         EditorView.lineWrapping,

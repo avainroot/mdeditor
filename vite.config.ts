@@ -30,7 +30,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@components": resolve(__dirname, "src/Components"),
+      "@components": resolve(__dirname, "src/components"),
       "@context": resolve(__dirname, "src/context"),
       "@provider": resolve(__dirname, "src/provider"),
       "@hooks": resolve(__dirname, "src/hooks"),

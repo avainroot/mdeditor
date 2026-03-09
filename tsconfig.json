@@ -21,7 +21,7 @@
     "paths": {
       "@context": ["src/context/index.ts"],
       "@provider": ["src/provider/index.ts"],
-      "@components": ["src/Components/index.ts"],
+      "@components": ["src/components/index.ts"],
       "@hooks/*": ["src/hooks/*"],
       "@editor-types": ["src/types/index.ts"]
     }

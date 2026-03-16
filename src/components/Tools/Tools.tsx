@@ -27,43 +27,43 @@ const Tools = () => {
     <div className={styles.tools}>
       <div className={styles.group}>
         <Button onClick={() => exec((v) => editorTool.prepend(v, "## "))}>
-          <TextHTwoIcon size={24} weight="bold" />
+          <TextHTwoIcon />
         </Button>
         <Button>
-          <TextHThreeIcon size={24} weight="bold" />
+          <TextHThreeIcon />
         </Button>
       </div>
       <div className={styles.sep} />
       <div className={styles.group}>
         <Button onClick={() => exec((v) => editorTool.selection(v, "**"))}>
-          <TextBIcon size={24} weight="bold" />
+          <TextBIcon />
         </Button>
         <Button onClick={() => exec((v) => editorTool.selection(v, "*"))}>
-          <TextItalicIcon size={24} weight="bold" />
+          <TextItalicIcon />
         </Button>
         <Button onClick={() => exec((v) => editorTool.selection(v, "~~"))}>
-          <TextStrikethroughIcon size={24} weight="bold" />
+          <TextStrikethroughIcon />
         </Button>
       </div>
       <div className={styles.sep} />
       <div className={styles.group}>
         <Button onClick={() => exec((v) => editorTool.link(v))}>
-          <LinkIcon size={24} weight="bold" />
+          <LinkIcon />
         </Button>
         <Button onClick={() => exec((v) => editorTool.selection(v, "`"))}>
-          <CodeIcon size={24} weight="bold" />
+          <CodeIcon />
         </Button>
       </div>
       <div className={styles.sep} />
       <div className={styles.group}>
         <Button onClick={() => exec((v) => editorTool.code(v))}>
-          <FileCodeIcon size={24} weight="bold" />
+          <FileCodeIcon />
         </Button>
         <Button onClick={() => exec((v) => editorTool.code(v, "typescript"))}>
-          <FileTsIcon size={24} weight="bold" />
+          <FileTsIcon />
         </Button>
         <Button onClick={() => exec((v) => editorTool.code(v, "javascript"))}>
-          <FileJsIcon size={24} weight="bold" />
+          <FileJsIcon />
         </Button>
       </div>
     </div>

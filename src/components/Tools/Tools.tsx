@@ -6,6 +6,7 @@ import {
   FileJsIcon,
   FileTsIcon,
   LinkIcon,
+  QuotesIcon,
   TextBIcon,
   TextHThreeIcon,
   TextHTwoIcon,
@@ -43,6 +44,9 @@ const Tools = () => {
         </Button>
         <Button onClick={() => exec((v) => editorTool.selection(v, "~~"))}>
           <TextStrikethroughIcon />
+        </Button>
+        <Button onClick={() => exec((v) => editorTool.prepend(v, "> "))}>
+          <QuotesIcon />
         </Button>
       </div>
       <div className={styles.sep} />

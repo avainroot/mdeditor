@@ -1,6 +1,6 @@
 {
   "name": "@rootflow/mdeditor",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Markdown editor",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

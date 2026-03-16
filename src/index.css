@@ -1,4 +1,15 @@
 :root {
+  --md-toolbar-bg: #21252b;
+  --md-toolbar-border: #2c313a;
+  --md-toolbar-sep: #2c313a;
+  --md-toolbar-icon: #5c6370;
+  --md-toolbar-hover-bg: #2c313a;
+  --md-toolbar-hover-icon: #abb2bf;
+  --md-toolbar-active-bg: #353b45;
+  --md-toolbar-active-icon: #e5c07b;
+  --md-toolbar-on-icon: #61afef;
+  --md-toolbar-disabled-icon: #3e4451;
+
   --md-color-bg: #282c34;
   --md-color-text: #abb2bf;
   --md-color-caret: #528bff;

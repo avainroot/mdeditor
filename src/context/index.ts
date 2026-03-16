@@ -1,9 +1,11 @@
-import type { EditorProps } from "src/types";
-import { createContext } from "react";
+import type { EditorContextProps } from "src/types";
+import { createContext, createRef } from "react";
+import type { EditorView } from "@codemirror/view";
 
-const EditorContext = createContext<EditorProps>({
+const EditorContext = createContext<EditorContextProps>({
   value: "",
   onChange: () => {},
+  viewRef: createRef<EditorView | null>(),
 });
 
 export default EditorContext;

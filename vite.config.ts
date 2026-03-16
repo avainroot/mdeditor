@@ -24,7 +24,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
       fileName: "index",
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
     },
   },
@@ -34,6 +34,7 @@ export default defineConfig({
       "@context": resolve(__dirname, "src/context"),
       "@provider": resolve(__dirname, "src/provider"),
       "@hooks": resolve(__dirname, "src/hooks"),
+      "@utils": resolve(__dirname, "src/utils"),
       "@editor-types": resolve(__dirname, "src/types"),
     },
   },

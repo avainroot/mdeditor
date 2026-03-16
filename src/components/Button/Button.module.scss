@@ -1,0 +1,39 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--md-toolbar-icon);
+  cursor: pointer;
+  transition:
+    background 0.12s,
+    color 0.12s,
+    transform 0.08s;
+
+  &:hover {
+    background: var(--md-toolbar-hover-bg);
+    color: var(--md-toolbar-hover-icon);
+  }
+
+  &:active {
+    background: var(--md-toolbar-active-bg);
+    color: var(--md-toolbar-active-icon);
+    transform: scale(0.92);
+  }
+
+  &.active {
+    color: var(--md-toolbar-on-icon);
+    background: var(--md-toolbar-hover-bg);
+  }
+
+  &:disabled {
+    color: var(--md-toolbar-disabled-icon);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

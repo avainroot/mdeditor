@@ -1,3 +1,10 @@
+.wrap {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .editor {
   border-radius: 8px;
   overflow: hidden;

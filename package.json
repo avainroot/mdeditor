@@ -37,10 +37,12 @@
     "@codemirror/commands": "^6.10.2",
     "@codemirror/lang-markdown": "^6.5.0",
     "@codemirror/language": "^6.12.2",
+    "@codemirror/state": "^6.6.0",
     "@codemirror/view": "^6.39.15",
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@lezer/highlight": "^1.2.3",
+    "@phosphor-icons/react": "^2.1.10",
     "highlight.js": "^11.11.1",
     "marked": "^17.0.3"
   },
@@ -64,8 +66,13 @@
     "tailwindcss": "^4.2.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
-    "vite": "^7.3.1",
+    "vite": "^8.0.0",
     "vite-plugin-css-injected-by-js": "^4.0.1",
     "vite-plugin-dts": "^4.5.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@codemirror/state": "6.6.0"
+    }
   }
 }

@@ -23,6 +23,7 @@
       "@provider": ["src/provider/index.ts"],
       "@components": ["src/components/index.ts"],
       "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
       "@editor-types": ["src/types/index.ts"]
     }
   },

@@ -20,6 +20,7 @@ export default defineConfig({
       "@provider": resolve(__dirname, "src/provider"),
       "@components": resolve(__dirname, "src/components"),
       "@hooks": resolve(__dirname, "src/hooks"),
+      "@utils": resolve(__dirname, "src/utils"),
       "@editor-types": resolve(__dirname, "src/ypes"),
     },
   },

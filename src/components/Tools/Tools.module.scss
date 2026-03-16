@@ -1,0 +1,23 @@
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 8px;
+  // border-bottom: 1px solid var(--md-toolbar-border);
+  background: var(--md-toolbar-bg);
+  border-radius: 8px;
+}
+
+.sep {
+  width: 1px;
+  height: 18px;
+  background: var(--md-toolbar-sep);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

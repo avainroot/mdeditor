@@ -22,7 +22,7 @@ const createRenderer = ({ styles }: PreviewProps) => {
   const renderer = new marked.Renderer();
 
   renderer.heading = ({ text, depth }) =>
-    `<h${depth} class="${styles[`heading-${depth}`]}">${text}</h${depth}>`;
+    `<h${depth} class="${styles[`heading-${depth}`]}">${marked.parseInline(text)}</h${depth}>`;
 
   renderer.paragraph = ({ text }) =>
     `<p class="${styles.paragraph}">${marked.parseInline(text)}</p>`;

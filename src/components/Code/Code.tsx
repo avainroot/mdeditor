@@ -1,11 +1,17 @@
 import { markdown } from "@codemirror/lang-markdown";
-import { EditorView } from "@codemirror/view";
+import { EditorView, keymap } from "@codemirror/view";
 import { useEffect, useRef } from "react";
 import useEditor from "@hooks/useEditor";
 import "@fontsource-variable/geist-mono";
 import styles from "./Code.module.scss";
 import { HighlightStyle, syntaxHighlighting } from "@codemirror/language";
 import { tags } from "@lezer/highlight";
+import {
+  defaultKeymap,
+  history,
+  historyKeymap,
+  indentWithTab,
+} from "@codemirror/commands";
 
 const markdownHighlight = HighlightStyle.define([
   { tag: tags.heading1, color: "#e06c75", fontWeight: "bold" },
@@ -23,7 +29,7 @@ const markdownHighlight = HighlightStyle.define([
 ]);
 
 const Code = () => {
-  const { value, onChange } = useEditor();
+  const { value, onChange, viewRef } = useEditor();
   const parent = useRef<HTMLDivElement>(null);
 
   const baseTheme = EditorView.theme({
@@ -80,11 +86,15 @@ const Code = () => {
         baseTheme,
         // drawSelection(),
         // highlightActiveLine(),
+        history(),
+        keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
         syntaxHighlighting(markdownHighlight),
         updateListener,
         EditorView.lineWrapping,
       ],
     });
+
+    if (viewRef) viewRef.current = view;
 
     return () => {
       view.destroy();

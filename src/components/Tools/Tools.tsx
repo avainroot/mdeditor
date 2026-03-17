@@ -7,6 +7,7 @@ import {
   FileTsIcon,
   LinkIcon,
   QuotesIcon,
+  TerminalWindowIcon,
   TextBIcon,
   TextHThreeIcon,
   TextHTwoIcon,
@@ -68,6 +69,9 @@ const Tools = () => {
         </Button>
         <Button onClick={() => exec((v) => editorTool.code(v, "javascript"))}>
           <FileJsIcon />
+        </Button>
+        <Button onClick={() => exec((v) => editorTool.code(v, "bash"))}>
+          <TerminalWindowIcon />
         </Button>
       </div>
     </div>

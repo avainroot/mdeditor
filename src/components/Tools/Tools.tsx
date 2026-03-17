@@ -6,6 +6,8 @@ import {
   FileJsIcon,
   FileTsIcon,
   LinkIcon,
+  ListDashesIcon,
+  ListNumbersIcon,
   QuotesIcon,
   TerminalWindowIcon,
   TextBIcon,
@@ -52,6 +54,12 @@ const Tools = () => {
       </div>
       <div className={styles.sep} />
       <div className={styles.group}>
+        <Button onClick={() => exec((v) => editorTool.prepend(v, "- "))}>
+          <ListDashesIcon />
+        </Button>
+        <Button onClick={() => exec((v) => editorTool.prepend(v, "1. "))}>
+          <ListNumbersIcon />
+        </Button>
         <Button onClick={() => exec((v) => editorTool.link(v))}>
           <LinkIcon />
         </Button>

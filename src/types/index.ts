@@ -1,7 +1,14 @@
 import type { EditorView } from "@codemirror/view";
 import type { RefObject } from "react";
 
-export interface EditorProps {
+export interface EditorOptions {
+  options?: {
+    placeholder?: string;
+    minHeight?: string | number;
+  };
+}
+
+export interface EditorProps extends EditorOptions {
   value: string;
   onChange: (value: string) => void;
 }

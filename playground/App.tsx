@@ -15,7 +15,7 @@ export default function App() {
             live preview:
           </div>
         </div>
-        <MDEditor value={value} onChange={setValue} />
+        <MDEditor value={value} onChange={setValue} options={{}} />
       </div>
     </div>
   );

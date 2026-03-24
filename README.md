@@ -28,16 +28,33 @@ import { MDEditor } from "@rootflow/mdeditor";
 export default function App() {
   const [value, setValue] = useState("");
 
-  return <MDEditor value={value} onChange={setValue} />;
+  return (
+    <MDEditor
+      value={value}
+      onChange={setValue}
+      options={{
+        placeholder: "Start typing...",
+        minHeight: 300,
+      }}
+    />
+  );
 }
 ```
 
 ## Props
 
-| Prop       | Type                      | Required | Description            |
-| ---------- | ------------------------- | -------- | ---------------------- |
-| `value`    | `string`                  | ✓        | Markdown content       |
-| `onChange` | `(value: string) => void` | ✓        | Called on every change |
+| Prop       | Type                              | Required | Description                     |
+| ---------- | --------------------------------- | -------- | ------------------------------- |
+| `value`    | `string`                          | ✓        | Markdown content                |
+| `onChange` | `(value: string) => void`         | ✓        | Called on every change          |
+| `options`  | [`EditorOptions`](#editoroptions) | ✗        | Additional editor configuration |
+
+## EditorOptions
+
+| Option        | Type               | Default | Description                           |
+| ------------- | ------------------ | ------- | ------------------------------------- |
+| `placeholder` | `string`           | `""`    | Placeholder text when editor is empty |
+| `minHeight`   | `string \| number` | `auto`  | Minimum height of the editor          |
 
 ## License
 

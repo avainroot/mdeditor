@@ -1,5 +1,5 @@
 import { markdown } from "@codemirror/lang-markdown";
-import { EditorView, keymap } from "@codemirror/view";
+import { EditorView, keymap, placeholder } from "@codemirror/view";
 import { useEffect, useRef } from "react";
 import useEditor from "@hooks/useEditor";
 import "@fontsource-variable/geist-mono";
@@ -29,7 +29,7 @@ const markdownHighlight = HighlightStyle.define([
 ]);
 
 const Code = () => {
-  const { value, onChange, viewRef } = useEditor();
+  const { value, onChange, viewRef, options } = useEditor();
   const parent = useRef<HTMLDivElement>(null);
 
   const baseTheme = EditorView.theme({
@@ -67,6 +67,8 @@ const Code = () => {
       border: "none",
       color: "var(--md-editor-gutter-color, #bbb)",
     },
+
+    ".cm-content, .cm-gutter": { minHeight: options?.minHeight || "200px" },
   });
 
   useEffect(() => {
@@ -91,6 +93,7 @@ const Code = () => {
         syntaxHighlighting(markdownHighlight),
         updateListener,
         EditorView.lineWrapping,
+        placeholder(options?.placeholder || "Начните вводить текст..."),
       ],
     });
 

@@ -5,6 +5,7 @@ export interface EditorOptions {
   options?: {
     placeholder?: string;
     minHeight?: string | number;
+    maxHeight?: string | number;
   };
 }
 

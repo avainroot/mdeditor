@@ -7,7 +7,10 @@ import { Tools } from "@components";
 const Editor = ({ children, ...props }: PropsWithChildren<EditorProps>) => {
   return (
     <EditorProvider {...props}>
-      <div className={styles.wrap}>
+      <div
+        className={styles.wrap}
+        style={{ maxHeight: props?.options?.maxHeight || "480px" }}
+      >
         <Tools />
         <div className={styles.editor}>{children}</div>
       </div>

@@ -54,7 +54,8 @@ export default function App() {
 | Option        | Type               | Default | Description                           |
 | ------------- | ------------------ | ------- | ------------------------------------- |
 | `placeholder` | `string`           | `""`    | Placeholder text when editor is empty |
-| `minHeight`   | `string \| number` | `auto`  | Minimum height of the editor          |
+| `minHeight`   | `string \| number` | `200px` | Minimum height of the editor          |
+| `maxHeight`   | `string \| number` | `480px` | Maximum height of the editor          |
 
 ## License
 

@@ -68,7 +68,9 @@ const Code = () => {
       color: "var(--md-editor-gutter-color, #bbb)",
     },
 
-    ".cm-content, .cm-gutter": { minHeight: options?.minHeight || "200px" },
+    ".cm-content, .cm-gutter": {
+      minHeight: options?.minHeight || "200px",
+    },
   });
 
   useEffect(() => {
